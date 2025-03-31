@@ -1,69 +1,86 @@
-# Welcome to your Lovable project
 
-## Project info
+# AI Chatbot using Vite and TypeScript
 
-**URL**: https://lovable.dev/projects/762e6d43-13e7-41e2-8d49-34f53c473eef
+This is an AI chatbot built using **Vite**, **TypeScript**, **React**, and **OpenAI API**. It features a clean, modular architecture with reusable components.
 
-## How can I edit this code?
+## 🚀 Features
+- AI-powered chatbot using OpenAI's API
+- Modular component-based architecture
+- TypeScript support for better type safety
+- Styled with TailwindCSS
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🛠 Installation
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/762e6d43-13e7-41e2-8d49-34f53c473eef) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
+### 1️⃣ Clone the Repository
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+git clone https://github.com/your-repo/ai-chatbot.git
+cd ai-chatbot
 ```
 
-**Edit a file directly in GitHub**
+### 2️⃣ Install Dependencies
+```sh
+npm install
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 3️⃣ Set Up OpenAI API Key
+Create a `.env.local` file in the root directory and add your OpenAI API key:
+```env
+VITE_OPENAI_API_KEY=your-api-key-here
+```
 
-**Use GitHub Codespaces**
+### 4️⃣ Run the Development Server
+```sh
+npm run dev
+```
+Open [http://localhost:5173](http://localhost:5173) in your browser to see the chatbot in action!
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 📂 Project Structure
+```
+ai-chatbot/
+│── public/                    # Static assets
+│── src/
+│   ├── components/
+│   │   ├── ui/
+│   │   │   ├── ChatHistory.tsx
+│   │   │   ├── ChatInput.tsx
+│   │   │   ├── ChatInterface.tsx
+│   │   │   ├── ChatMessage.tsx
+│   │   │   ├── ErrorBoundary.tsx
+│   │   │   ├── LoadingScreen.tsx
+│   │   │   ├── TopicSelector.tsx
+│   ├── hooks/
+│   │   ├── use-mobile.ts
+│   │   ├── use-toast.ts
+│   ├── lib/
+│   ├── pages/
+│   ├── types/
+│   │   ├── vite-env.d.ts
+│   ├── App.tsx                 # Main App Component
+│   ├── main.tsx                # App Entry Point
+│   ├── index.css               # Global Styles
+│
+│── .gitignore                  # Ignored files for Git
+│── package.json                # Dependencies and scripts
+│── vite.config.ts               # Vite Configuration
+│── README.md                   # Project documentation
+```
 
-This project is built with .
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📝 Usage
+- Type a message in the chat input box and press **Enter** or click **Send**.
+- The chatbot will generate a response using OpenAI's API.
+- Responses appear in real-time, creating a smooth conversational experience.
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/762e6d43-13e7-41e2-8d49-34f53c473eef) and click on Share -> Publish.
+## 🚀 Deployment
+To deploy the chatbot, use **Vercel** or **Netlify**:
+```sh
+npx vercel
 
-## I want to use a custom domain - is that possible?
 
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
